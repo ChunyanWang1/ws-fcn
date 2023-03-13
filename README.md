@@ -14,7 +14,7 @@ This repository contains the original implementation of our paper:
 
 
 ### Qualitative results
-<img src="./figures/result.png" alt="drawing" width="480"/><br>
+<img src="./figures/result.png" alt="drawing"/><br>
 
 ### Setup
 1. **requirements.** This project was originally developed with Python 3.6, PyTorch 1.2 and CUDA 10.0.
