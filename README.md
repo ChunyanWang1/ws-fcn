@@ -10,7 +10,7 @@ This repository contains the original implementation of our paper:
 [[arXiv preprint]](https://arxiv.org/abs/2005.08104)
 
 ### overview
-<img src="./figures/overview.png" alt="drawing" width="480"/><br> 
+<img src="./figures/overview.png" alt="drawing"/><br> 
 
 
 ### Qualitative results
