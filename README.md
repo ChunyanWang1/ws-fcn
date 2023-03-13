@@ -17,10 +17,10 @@ This repository contains the original implementation of our paper:
 <img src="./figures/result.png" alt="drawing" width="480"/><br>
 
 ### Setup
-1. **requirements.** This project was originally developed with Python 3.6, PyTorch 1.2 and CUDA 10.0. The training requires at least two 1080 Ti X GPUs (11Gb memory each).
+1. **requirements.** This project was originally developed with Python 3.6, PyTorch 1.2 and CUDA 10.0.
 
 2. **Download and link to the dataset.** We train our model on the original Pascal VOC 2012 augmented with the SBD data (10K images in total). Download the data from:
-    - VOC: [Training/Validation (2GB .tar file)](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
+   - VOC: [Training/Validation (2GB .tar file)](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
     - SBD: [Training (1.4GB .tgz file)](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/semantic_contours/benchmark.tgz)
 
     Link to the data:
