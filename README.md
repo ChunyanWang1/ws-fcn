@@ -10,7 +10,7 @@ To appear at TNNLS 2023 as a regular paper
 
 ## Abstract 
 <p align="justify">
-Thanks to the advantages of the friendly annotations and the satisfactory performance, Weakly-Supervised Semantic Segmentation (WSSS) approaches have been extensively studied. Recently, the single-stage WSSS was awakened to alleviate problems of the expensive computational costs and the complicated training procedures in multi-stage WSSS. However, results of such an immature model suffer from problems of background incompleteness and object incompleteness. We empirically find that they are caused by the insufficiency of the global object context and the lack of the local regional contents, respectively. Under these observations, we propose a single-stage WSSS model with only the image-level class label supervisions, termed as Weakly-Supervised Feature Coupling Network (WS-FCN), which can capture the multi-scale context formed from the adjacent feature grids, and encode the fine-grained spatial information from the low-level features into the high-level ones. Specifically, a flexible context aggregation module is proposed to capture the global object context in different granular spaces. Besides, a semantically consistent feature fusion module is proposed in a bottom-up parameter-learnable fashion to aggregate the fine-grained local contents. Based on these two modules, WS-FCN lies in a self-supervised end-to-end training fashion. Extensive experimental results on the challenging PASCAL VOC 2012 and MS COCO 2014 demonstrate the effectiveness and efficiency of \textbf{WS-FCN}, which can achieve state-of-the-art results by 65.02% and 64.22% mIoU on PASCAL VOC 2012 val set and  test set, 34.12% mIoU on MS COCO 2014 val set, respectively.
+Thanks to the advantages of the friendly annotations and the satisfactory performance, Weakly-Supervised Semantic Segmentation (WSSS) approaches have been extensively studied. Recently, the single-stage WSSS was awakened to alleviate problems of the expensive computational costs and the complicated training procedures in multi-stage WSSS. However, results of such an immature model suffer from problems of background incompleteness and object incompleteness. We empirically find that they are caused by the insufficiency of the global object context and the lack of the local regional contents, respectively. Under these observations, we propose a single-stage WSSS model with only the image-level class label supervisions, termed as Weakly-Supervised Feature Coupling Network (WS-FCN), which can capture the multi-scale context formed from the adjacent feature grids, and encode the fine-grained spatial information from the low-level features into the high-level ones. Specifically, a flexible context aggregation module is proposed to capture the global object context in different granular spaces. Besides, a semantically consistent feature fusion module is proposed in a bottom-up parameter-learnable fashion to aggregate the fine-grained local contents. Based on these two modules, WS-FCN lies in a self-supervised end-to-end training fashion. Extensive experimental results on the challenging PASCAL VOC 2012 and MS COCO 2014 demonstrate the effectiveness and efficiency of WS-FCN, which can achieve state-of-the-art results by 65.02% and 64.22% mIoU on PASCAL VOC 2012 val set and  test set, 34.12% mIoU on MS COCO 2014 val set, respectively.
 
 ## The overall architecture
 <img src="./figures/overview.png" alt="drawing"/><br> 
@@ -39,13 +39,13 @@ Thanks to the advantages of the friendly annotations and the satisfactory perfor
 ## Training, Inference and Evaluation
 The directory `launch` contains template bash scripts for training, inference and evaluation. 
 
-**Training.** For each run, you need to specify names of two variables, for example,EXP=baselines,RUN_ID=v01
+1. **Training.** For each run, you need to specify names of two variables, for example,EXP=baselines,RUN_ID=v01
 ```
 python -u train.py  --dataset pascal_voc  --cfg configs/voc_resnet38.yaml  --exp baselines  --run v01
 ```
 Running `bash ./launch/run_voc_resnet38.sh` will create a directory `./logs/pascal_voc/baselines/v01` with tensorboard events and will save snapshots into `./snapshots/pascal_voc/baselines/v01`.
 
-**Inference.** To generate final masks, you will need to specify:
+2. **Inference.** To generate final masks, you will need to specify:
 * `EXP` and `RUN_ID` you used for training;
 * `OUTPUT_DIR` the path where to save the masks;
 * `FILELIST` specifies the file to the data split;
@@ -55,7 +55,7 @@ Running `bash ./launch/run_voc_resnet38.sh` will create a directory `./logs/pasc
 python -u  infer_val.py  --dataset pascal_voc --cfg configs/voc_resnet38.yaml --exp baselines --run v01 --resume e018Xs0.905 --infer-list data/val_voc.txt  --mask-output-dir results/v01/
 ```
 
-**Evaluation.** To compute IoU of the masks, you will need to specify `SAVE_DIR` that contains the masks and `FILELIST` specifying the split for evaluation.
+3. **Evaluation.** To compute IoU of the masks, you will need to specify `SAVE_DIR` that contains the masks and `FILELIST` specifying the split for evaluation.
 ```
 python -u eval_seg.py --data /data/voc_aug --filelist data/val_voc.txt --mask results/v01/
 ```
