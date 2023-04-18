@@ -6,7 +6,7 @@ This repository contains the original implementation of our paper:
 **Coupling Global Context and Local Contents for Weakly-Supervised Semantic Segmentation**<br>
  chunyan wang，Dong Zhang, Liyan Zhang and Jinhui Tang
 
- To appear at TNNLS 2022.
+ To appear at TNNLS 2023.
 [[arXiv preprint]](https://arxiv.org/abs/2005.08104)
 
 ### overview
