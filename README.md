@@ -63,13 +63,13 @@ python -u eval_seg.py --data /data/voc_aug --filelist data/val_voc.txt --mask re
 ## Weights
 For testing, we provide our pre-trained WideResNet38 model:
 
-| Backbone | Val | Val (+CRF) | weight link |
+| Backbone | Val | +CRF | weight link |
 |:---:|:---:|:---:|---:|
 | WideResNet38 | 61.57 | 63.23 | [model_enc_e018Xs0.905.pth (565M)](https://drive.google.com/file/d/1bNRef-QsR7QtOUYycHpplBSfg5UrIFG6/view?usp=sharing) |
 
 we also release the masks predicted by this model:
 
-| Split | IoU | IoU (+CRF) | weight link |
+| Split | IoU | +CRF | weight link |
 |:---:|:---:|:---:|:---:|
 | val | 61.57 | 63.23 | [val_results.tar (6.94M)](https://drive.google.com/file/d/1Vy9thpf3vMkSv5iQeugJVMPe0vbDStAx/view?usp=sharing) | 
 | test | 62.30 | 64.22 | [test_results.tar (6.71M)](https://drive.google.com/file/d/1TXNORaImcKqlX_Gbylg68UgaxxE7Oh-J/view?usp=sharing) |
