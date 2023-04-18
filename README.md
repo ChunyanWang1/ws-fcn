@@ -77,12 +77,12 @@ we also release the masks predicted by this model:
 We thank PyTorch team, and Nikita Araslanov for releasing his [code](https://github.com/visinf/1-stage-wseg) that we hevily refered.
 
 ## Citation
-We hope that you find this work useful. If you would like to acknowledge us, please, use the following citation:
-```
-@inproceedings{Araslanov:2020:WSEG,
-  title     = {Single-Stage Semantic Segmentation from Image Labels},
-  author    = {Araslanov, Nikita and and Roth, Stefan},
-  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year = {2020}
-}
-```
+#We hope that you find this work useful. If you would like to acknowledge us, please, use the following citation:
+#```
+#@inproceedings{wang,
+#  title     = {Coupling Global Context and Local Contents for Weakly-Supervised Semantic Segmentation},
+#  author    = {Chunyan Wang, Dong Zhang,Liyan Zhang, Jinhui Tang},
+#  booktitle = {},
+#  year = {2023}
+#}
+#```
