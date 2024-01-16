@@ -11,6 +11,7 @@ from utils.dcrf import crf_inference
 from datasets.pascal_voc_ms import MultiscaleLoader, CropLoader 
 #from datasets.coco_ms import MultiscaleLoader, CropLoader
 from utils import visualization 
+import imageio
 
 class ResultWriter:
     
