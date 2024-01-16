@@ -71,7 +71,8 @@ class ResultWriter:
             #str1 = "crf_" +str(t)
             #str2="crfp"+str(t)
             filepath = os.path.join(self.root,"crf", img_name + '.png')
-            scipy.misc.imsave(filepath, pred_crf.astype(np.uint8))
+            #scipy.misc.imsave(filepath, pred_crf.astype(np.uint8))
+            imageio.imsave(filepath,pred_crf.astype(np.uint8))
 
 
 
@@ -81,7 +82,8 @@ class ResultWriter:
 
 
         filepath = os.path.join(self.root, img_name + '.png')
-        scipy.misc.imsave(filepath, pred.astype(np.uint8))
+        #scipy.misc.imsave(filepath, pred.astype(np.uint8))
+        imageio.imsave(filepath,pred.astype(np.uint8))
 
 
         #filepath0 = os.path.join(self.root, "crf", img_name + '.png')
@@ -96,7 +98,8 @@ class ResultWriter:
             overlay = self._mask_overlay(masks_all, images)
             filepath = os.path.join(self.root, "vis", img_name + '.png')
             overlay255 = np.round(overlay * 255.).astype(np.uint8)
-            scipy.misc.imsave(filepath, overlay255)
+            #scipy.misc.imsave(filepath, overlay255)
+            imageio.imsave(filepath,overlay255)
  
 class MergeMultiScale(ResultWriter):
 
